@@ -48,3 +48,15 @@ public class FluentWaitDemo {
 	
 
 }
+//other option is using Function 
+Wait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+    wait.withTimeout(30, SECONDS)
+    wait.pollingEvery(5, SECONDS)
+   wait.ignoring(NoSuchElementException.class);
+
+WebElement mywebElement= wait.until(new Function<WebDriver, WebElement>() 
+{
+  public WebElement apply(WebDriver driver) {
+  return driver.findElement(By.id("mywebElement"));
+}
+});

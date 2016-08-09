@@ -1,0 +1,14 @@
+public void testing(){
+		int i=0;
+		while(true){
+			if(true){
+				
+			}else{
+				break;
+			}
+			if(i==10){
+				break;
+			}
+			i++;
+		}
+	}
